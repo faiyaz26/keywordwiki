@@ -1,0 +1,64 @@
+{% extends "_base.html" %}
+
+
+{% block content %}
+<header class="masthead h-100 col">
+  <div class="overlay">
+      <div class="row">
+          <div class="col"></div>
+          <div class="col-12">
+              <div id="keywordCloud"></div>
+          </div>
+          <div class="col"></div>
+      </div>
+      
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+        <form class="center-form">
+          <div class="form-row">
+            <div class="col-12 col-md-9 mb-2 mb-md-0">
+              <input type="email" class="form-control form-control-lg" placeholder="eg: microservice">
+            </div>
+            <div class="col-12 col-md-3">
+              <button type="submit" class="btn btn-block btn-lg btn-primary">Search</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!--
+<div class="text-center">
+  {% load staticfiles %}
+  <br>
+  <img src="http://media.django.es.s3.amazonaws.com/nuevo/images/djangopony.png">
+  <br>
+  <p>This page has been viewed <strong>{{counter}}</strong> times!</p>
+</div>
+
+<br>
+
+<form action="/" method="POST">
+  {% csrf_token %}
+  <div class="form-group">
+    <input name="item_text" class="form-control input-lg" type="text" placeholder="Enter a message" required>
+  </div>
+  <input type="submit" class="btn btn-success btn-lg btn-block" value="Submit">
+</form>
+
+<br>
+<hr>
+
+<div>
+</div>
+-->
+
+{% endblock content %}
+
+{% block custom_script %}
+  
+{% endblock %}
