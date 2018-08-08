@@ -13,8 +13,20 @@
   <body id="page-top">
     <nav class="navbar navbar-light bg-light static-top">
       <div class="container">
-        <a class="navbar-brand" href="#">KeywordWiki</a>
-        <a class="btn btn-primary" href="#">Sign In</a>
+        <a class="navbar-brand" href="/">KeywordWiki</a>
+        {% with request.resolver_match.view_name as view_name %}
+          {% if view_name != 'keywordwiki:index' %}
+            <form class="form-inline mr-auto">
+                <input class="form-control mr-sm-2" type="search" placeholder="eg: kubernetes" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+          {% endif %}
+        {% endwith %}
+        <ul class="navbar-nav my-2 my-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="/about">About</a>
+          </li>
+        </ul>
       </div>
     </nav>
     {% block content %}

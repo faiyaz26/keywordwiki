@@ -8,4 +8,7 @@ from redis import Redis
 def home(request):
     #counter = redis.incr('counter')
     counter = 0
-    return render(request, 'home.html', {'counter': counter})
+    return render(request, 'home.html')
+
+def about(request):
+    return render(request, 'about.html')
